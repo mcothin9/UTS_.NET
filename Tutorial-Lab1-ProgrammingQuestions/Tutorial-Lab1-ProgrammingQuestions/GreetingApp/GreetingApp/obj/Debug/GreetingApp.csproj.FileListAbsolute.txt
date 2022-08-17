@@ -1,0 +1,8 @@
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-1\Lab Work\Week-LabProgrammingQuestions\GreetingApp\GreetingApp\bin\Debug\GreetingApp.exe.config
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingApp\GreetingApp\bin\Debug\GreetingApp.exe.config
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingApp\GreetingApp\bin\Debug\GreetingApp.exe
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingApp\GreetingApp\bin\Debug\GreetingApp.pdb
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingApp\GreetingApp\obj\Debug\GreetingApp.csproj.AssemblyReference.cache
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingApp\GreetingApp\obj\Debug\GreetingApp.csproj.CoreCompileInputs.cache
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingApp\GreetingApp\obj\Debug\GreetingApp.exe
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingApp\GreetingApp\obj\Debug\GreetingApp.pdb

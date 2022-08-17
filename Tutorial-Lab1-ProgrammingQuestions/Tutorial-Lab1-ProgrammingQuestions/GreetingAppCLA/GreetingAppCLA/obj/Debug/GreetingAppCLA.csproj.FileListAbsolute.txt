@@ -1,0 +1,13 @@
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-1\Lab Work\Week-LabProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\bin\Debug\GreetingAppCLA.exe.config
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-1\Lab Work\Week-LabProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\bin\Debug\GreetingAppCLA.exe
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-1\Lab Work\Week-LabProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\bin\Debug\GreetingAppCLA.pdb
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-1\Lab Work\Week-LabProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\obj\Debug\GreetingAppCLA.csprojResolveAssemblyReference.cache
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-1\Lab Work\Week-LabProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\obj\Debug\GreetingAppCLA.exe
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-1\Lab Work\Week-LabProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\obj\Debug\GreetingAppCLA.pdb
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\bin\Debug\GreetingAppCLA.exe.config
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\bin\Debug\GreetingAppCLA.exe
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\bin\Debug\GreetingAppCLA.pdb
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\obj\Debug\GreetingAppCLA.csproj.AssemblyReference.cache
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\obj\Debug\GreetingAppCLA.csproj.CoreCompileInputs.cache
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\obj\Debug\GreetingAppCLA.exe
+C:\Workspace\Tutorial-Lab1-ProgrammingQuestions\Tutorial-Lab1-ProgrammingQuestions\GreetingAppCLA\GreetingAppCLA\obj\Debug\GreetingAppCLA.pdb
