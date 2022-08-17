@@ -1,0 +1,9 @@
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\bin\Debug\Shapes.exe.config
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\obj\Debug\Shapes.csprojResolveAssemblyReference.cache
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\bin\Debug\Shapes.exe
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\bin\Debug\Shapes.pdb
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\obj\Debug\Shapes.exe
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\obj\Debug\Shapes.pdb
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingQuestions\Shapes\Shapes\bin\Debug\Shapes.exe.config
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingQuestions\Shapes\Shapes\obj\Debug\Shapes.exe
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingQuestions\Shapes\Shapes\obj\Debug\Shapes.pdb
