@@ -1,0 +1,14 @@
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\bin\Debug\netcoreapp3.1\A1__BankManagement.exe
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\bin\Debug\netcoreapp3.1\A1__BankManagement.deps.json
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\bin\Debug\netcoreapp3.1\A1__BankManagement.runtimeconfig.json
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\bin\Debug\netcoreapp3.1\A1__BankManagement.runtimeconfig.dev.json
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\bin\Debug\netcoreapp3.1\A1__BankManagement.dll
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\bin\Debug\netcoreapp3.1\A1__BankManagement.pdb
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\obj\Debug\netcoreapp3.1\A1__BankManagement.csproj.AssemblyReference.cache
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\obj\Debug\netcoreapp3.1\A1__BankManagement.GeneratedMSBuildEditorConfig.editorconfig
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\obj\Debug\netcoreapp3.1\A1__BankManagement.AssemblyInfoInputs.cache
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\obj\Debug\netcoreapp3.1\A1__BankManagement.AssemblyInfo.cs
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\obj\Debug\netcoreapp3.1\A1__BankManagement.csproj.CoreCompileInputs.cache
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\obj\Debug\netcoreapp3.1\A1__BankManagement.dll
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\obj\Debug\netcoreapp3.1\A1__BankManagement.pdb
+E:\workSpace\UTS_.NET\A1\A1__BankManagement\obj\Debug\netcoreapp3.1\A1__BankManagement.genruntimeconfig.cache

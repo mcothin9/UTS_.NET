@@ -1,0 +1,7 @@
+J:\UTS\D Drive\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-7\Tutorial\Tutorial lab 7 ProgrammingSolutions\Week7Program2\Week7Program2\bin\Debug\Week7Program2.exe.config
+J:\UTS\D Drive\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-7\Tutorial\Tutorial lab 7 ProgrammingSolutions\Week7Program2\Week7Program2\bin\Debug\Week7Program2.exe
+J:\UTS\D Drive\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-7\Tutorial\Tutorial lab 7 ProgrammingSolutions\Week7Program2\Week7Program2\bin\Debug\Week7Program2.pdb
+J:\UTS\D Drive\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-7\Tutorial\Tutorial lab 7 ProgrammingSolutions\Week7Program2\Week7Program2\obj\Debug\Week7Program2.csprojAssemblyReference.cache
+J:\UTS\D Drive\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-7\Tutorial\Tutorial lab 7 ProgrammingSolutions\Week7Program2\Week7Program2\obj\Debug\Week7Program2.csproj.CoreCompileInputs.cache
+J:\UTS\D Drive\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-7\Tutorial\Tutorial lab 7 ProgrammingSolutions\Week7Program2\Week7Program2\obj\Debug\Week7Program2.exe
+J:\UTS\D Drive\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-7\Tutorial\Tutorial lab 7 ProgrammingSolutions\Week7Program2\Week7Program2\obj\Debug\Week7Program2.pdb

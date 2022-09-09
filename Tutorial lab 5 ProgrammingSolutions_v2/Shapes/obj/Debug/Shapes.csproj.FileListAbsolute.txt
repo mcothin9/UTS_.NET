@@ -1,0 +1,19 @@
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\bin\Debug\Shapes.exe.config
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\obj\Debug\Shapes.csprojResolveAssemblyReference.cache
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\bin\Debug\Shapes.exe
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\bin\Debug\Shapes.pdb
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\obj\Debug\Shapes.exe
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\Tutorial-Lab3-ProgrammingSolutions\Shapes\Shapes\obj\Debug\Shapes.pdb
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\New folder\Shapes\Shapes\bin\Debug\Shapes.exe.config
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\New folder\Shapes\Shapes\obj\Debug\Shapes.exe
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\New folder\Shapes\Shapes\obj\Debug\Shapes.pdb
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\New folder\Shapes\Shapes\bin\Debug\Shapes.exe
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\New folder\Shapes\Shapes\bin\Debug\Shapes.pdb
+D:\Teaching\Spring 2018\31927 Net programming\Lectures-pptx\Week-4\Lab Work\New folder\Shapes\Shapes\obj\Debug\Shapes.csprojResolveAssemblyReference.cache
+C:\Users\dtdye\Downloads\Tutorial lab 5 ProgrammingQuestion\Tutorial lab 5 ProgrammingQuestion\Shapes\Shapes\bin\Debug\Shapes.exe.config
+C:\Users\dtdye\Downloads\Tutorial lab 5 ProgrammingQuestion\Tutorial lab 5 ProgrammingQuestion\Shapes\Shapes\bin\Debug\Shapes.exe
+C:\Users\dtdye\Downloads\Tutorial lab 5 ProgrammingQuestion\Tutorial lab 5 ProgrammingQuestion\Shapes\Shapes\bin\Debug\Shapes.pdb
+C:\Users\dtdye\Downloads\Tutorial lab 5 ProgrammingQuestion\Tutorial lab 5 ProgrammingQuestion\Shapes\Shapes\obj\Debug\Shapes.csprojAssemblyReference.cache
+C:\Users\dtdye\Downloads\Tutorial lab 5 ProgrammingQuestion\Tutorial lab 5 ProgrammingQuestion\Shapes\Shapes\obj\Debug\Shapes.csproj.CoreCompileInputs.cache
+C:\Users\dtdye\Downloads\Tutorial lab 5 ProgrammingQuestion\Tutorial lab 5 ProgrammingQuestion\Shapes\Shapes\obj\Debug\Shapes.exe
+C:\Users\dtdye\Downloads\Tutorial lab 5 ProgrammingQuestion\Tutorial lab 5 ProgrammingQuestion\Shapes\Shapes\obj\Debug\Shapes.pdb
