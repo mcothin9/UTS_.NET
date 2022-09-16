@@ -1,0 +1,7 @@
+First Name|1234
+Last Name|124
+Address|124
+Phone|124
+Email|mc08241023@gmail.com
+AccountNo|100026
+Balance|0

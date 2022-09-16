@@ -10,57 +10,6 @@ using System.Configuration;
 
 namespace BankManagementSystem
 {
-    /*
-    public class User
-    {
-        private string userName;
-        public string userPassword;
-
-        public User(string name, string password)
-        {
-            this.userName = name;
-            this.userPassword = password;
-        }
-
-        public static User addUser() // Not sure whether this function is required or not
-        {
-            string inputName = Console.ReadLine();
-            string inputPassword = readPassword();
-            User user = new User(inputName, inputPassword);
-            return user;
-        }
-
-        public static string readPassword()
-        {
-            string password = "";
-            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-            while (keyInfo.Key != ConsoleKey.Enter)
-            {
-                if (keyInfo.Key != ConsoleKey.Backspace) // Enter one character
-                {
-                    Console.Write("*");
-                    password += keyInfo.KeyChar;
-                }
-                else if (keyInfo.Key == ConsoleKey.Backspace) // Delete one character
-                {
-                    if (!string.IsNullOrEmpty(password))
-                    {
-                        password = password.Substring(0, password.Length - 1);
-                        int position = Console.CursorLeft;
-                        Console.SetCursorPosition(position - 1, Console.CursorTop);
-                        Console.Write(" ");
-                        Console.SetCursorPosition(position - 1, Console.CursorTop);
-                    }
-                }
-                keyInfo = Console.ReadKey(true);
-            }
-
-            Console.WriteLine();
-            return password;
-        }
-    }
-    */
-
     public class Account
     {
         private string firstName;
@@ -72,7 +21,6 @@ namespace BankManagementSystem
         private double balance;
         private List<string> history;
 
-        //static Account(string firstName, string lastName, string address, int phone, string email)
         public Account(string firstName, string lastName, string address, int phone, string email)
         {
             this.firstName = firstName;
@@ -178,10 +126,11 @@ namespace BankManagementSystem
         static void Main(string[] args)
         {
             loginMenu();
-            // int userInput = int.Parse(Console.ReadLine());
         }
 
-        //  <==================================    Task.1 Login Menu   ====================================>
+        //  <==============================================================================================================>
+        //  <                                           Task.1 Login Menu                                                  >
+        //  <==============================================================================================================>
         public static void loginMenu()
         {
             Console.Clear();
@@ -305,7 +254,9 @@ namespace BankManagementSystem
             return Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
         }
 
-        //  <==================================    Task.2 Main Menu   ====================================>
+        //  <==============================================================================================================>
+        //  <                                                Task.2 Main Menu                                              >
+        //  <==============================================================================================================>
         public static void mainMenu()
         {
             Console.Clear();
@@ -370,7 +321,9 @@ namespace BankManagementSystem
             }
         }
 
-        //  <==================================    Task.3 Create a new account   ====================================>
+        //  <==============================================================================================================>
+        //  <                                          Task.3 Create a new account                                         >
+        //  <==============================================================================================================>
         public static void createAccount()
         {
             Account newAccount = constructAccount();
@@ -453,24 +406,44 @@ namespace BankManagementSystem
             }
         }
 
-        private static void emailForCreateSuccess(Account account) //<==================================================================== Need Fix
+        private static void emailForCreateSuccess(Account account)
         {
-            string emailBody = account.getFirstName() + "\n" + account.getLastName() + "\n" + account.getAddress() + "\n" +
-                account.getPhone().ToString() + "\n" + account.getEmail() + "\n" + account.getAccountNo().ToString() + "\n" +
-                account.getBalance().ToString() + "\n";
-            string emailSubject = "Announcement for account successful created";
+            // Set message
+            MailMessage announcement = new MailMessage();
+            announcement.From = new MailAddress("mingchenothin9@gmail.com");
+            announcement.To.Add(account.getEmail());
+            announcement.Subject = "[13476080 A1] Announcement for account successful created";
+            announcement.Body = generateEmailBody(account);
 
-            // User SMTP to send email
-            var smtpClient = new SmtpClient("smtp-mail.outlook.com")
+            // Set smtp
+            SmtpClient smtpClient = new SmtpClient();
+            smtpClient.Host = "smtp.gmail.com";
+            smtpClient.Port = 587;
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtpClient.UseDefaultCredentials = false;
+            smtpClient.EnableSsl = true;
+            smtpClient.Credentials = new NetworkCredential("mingchenothin9@gmail.com", "glrbgxichaeuieso");
+
+            // Use SMTP to send email
+            try
             {
-                Port = 587,
-                Credentials = new NetworkCredential("mingchen.sun@student.uts.edu.au", "Sun19971107!"),
-                EnableSsl = true,
-            };
-
-            smtpClient.Send("mingchen.sun@student.uts.edu.au", account.getEmail(), emailSubject, emailBody);
+                smtpClient.Send(announcement);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception caught in CreateMessageWithAttachment(): {0}",
+                    e.ToString());
+            }
             Console.ReadKey();
             mainMenu();
+        }
+
+        private static string generateEmailBody(Account account)
+        {
+            string body = "FirstName: " + account.getFirstName() + "\n" + "LastName: " + account.getLastName() + "\n" +
+                "Address: " + account.getAddress() + "\n" + "Phone: " + account.getPhone().ToString() + "\n" +
+                "Email: " + account.getEmail() + "\n" + "Account Number: " + account.getAccountNo().ToString() + "\n";
+            return body;
         }
 
 
@@ -603,14 +576,16 @@ namespace BankManagementSystem
             }
         }
 
-        //  <========================================    Task.5 Deposit   =============================================>
+        //  <==============================================================================================================>
+        //  <                                                Task.5 Deposit                                                >
+        //  <==============================================================================================================>
         public static void deposit()
         {
             Console.Clear();
             Console.WriteLine("+======================================================+");
             Console.WriteLine("|                        DEPOSIT                       |");
             Console.WriteLine("|------------------------------------------------------|");
-            Console.WriteLine("|                  ENTER THE  DETAILS                  |");
+            Console.WriteLine("|                  ENTER THE DETAILS                   |");
             Console.WriteLine("|                                                      |");
             Console.WriteLine("|    Account Number:                                   |");
             Console.WriteLine("|    Amount: $                                         |");
@@ -708,14 +683,16 @@ namespace BankManagementSystem
             }
         }
 
-        //  <======================================    Task.6 Withdrawal   ============================================>
+        //  <==============================================================================================================>
+        //  <                                               Task.6 Withdraw                                                >
+        //  <==============================================================================================================>
         public static void withdraw()
         {
             Console.Clear();
             Console.WriteLine("+======================================================+");
             Console.WriteLine("|                       WITHDRAW                       |");
             Console.WriteLine("|------------------------------------------------------|");
-            Console.WriteLine("|                  ENTER THE  DETAILS                  |");
+            Console.WriteLine("|                  ENTER THE DETAILS                   |");
             Console.WriteLine("|                                                      |");
             Console.WriteLine("|    Account Number:                                   |");
             Console.WriteLine("|    Amount: $                                         |");
@@ -774,23 +751,52 @@ namespace BankManagementSystem
             }
         }
 
-        //  <====================================    Task.7 Account Statement   =======================================>
+        //  <==============================================================================================================>
+        //  <                                         Task.7 Account statement                                             >
+        //  <==============================================================================================================>
         public static void accountStatement()
         {
             Console.Clear();
+            Console.WriteLine("+======================================================+");
+            Console.WriteLine("|                      STATEMENT                       |");
+            Console.WriteLine("|------------------------------------------------------|");
+            Console.WriteLine("|                  ENTER THE DETAILS                   |");
+            Console.WriteLine("|                                                      |");
+            Console.WriteLine("|    Account Number:                                   |");
+            Console.WriteLine("+======================================================+");
+
+            // Let user input account no
+            Console.SetCursorPosition(21, 5);
+            string accountNoToSearch = Console.ReadLine();
         }
 
-        //  <====================================    Task.8 Delete an account   =======================================>
+        //  <==============================================================================================================>
+        //  <                                         Task.8 Delete an account                                             >
+        //  <==============================================================================================================>
         public static void deleteAccount()
         {
             Console.Clear();
+            Console.WriteLine("+======================================================+");
+            Console.WriteLine("|                  DELETE AN ACCOUNT                   |");
+            Console.WriteLine("|------------------------------------------------------|");
+            Console.WriteLine("|                  ENTER THE DETAILS                   |");
+            Console.WriteLine("|                                                      |");
+            Console.WriteLine("|    Account Number:                                   |");
+            Console.WriteLine("+======================================================+");
+
+            // Let user input account no
+            Console.SetCursorPosition(21, 5);
+            string accountNoToSearch = Console.ReadLine();
         }
 
-        //  <===========================================    Task.9 Exit   =============================================>
+        //  <==============================================================================================================>
+        //  <                                               Task.9 Exit                                                    >
+        //  <==============================================================================================================>
         public static void exitBMS()
         {
-            // System.Diagnostics.Process.GetCurrentProcess().Kill();
             Console.Clear();
+            Console.WriteLine("Exiting the simple banking management system.");
+            Console.WriteLine("Thank you for using!");
             Environment.Exit(0);
         }
     }
