@@ -1,0 +1,7 @@
+First Name|123412
+Last Name|124124
+Address|124124
+Phone|124124
+Email|124124@gmail.com
+AccountNo|100002
+Balance|0

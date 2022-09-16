@@ -1,0 +1,7 @@
+First Name|wad
+Last Name|awd
+Address|awd
+Phone|980080
+Email|mingchenothin9@gmail.com
+AccountNo|100001
+Balance|0

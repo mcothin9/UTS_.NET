@@ -1,0 +1,7 @@
+First Name|124241
+Last Name|124124
+Address|124124
+Phone|1241241
+Email|mingchen.sun@student.uts.edu.au
+AccountNo|100004
+Balance|0

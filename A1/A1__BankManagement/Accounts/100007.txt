@@ -1,0 +1,7 @@
+First Name|124124124
+Last Name|24124124
+Address|124124124
+Phone|124124421
+Email|mingchenothin9@gmail.com
+AccountNo|100007
+Balance|0

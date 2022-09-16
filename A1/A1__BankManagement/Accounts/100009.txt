@@ -1,0 +1,12 @@
+First Name|2412
+Last Name|24
+Address|214124
+Phone|214124
+Email|mingchenothin9@gmail.com
+AccountNo|100009
+Balance|122.6
+2022/9/16|Deposit|0|10.5
+2022/9/16|Deposit|10.5|100
+2022/9/16|Deposit|110.5|10.1
+2022/9/16|Deposit|120.6|1
+2022/9/16|Deposit|121.6|1
