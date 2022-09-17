@@ -651,7 +651,7 @@ namespace BankManagementSystem
             double currentBalance = double.Parse(lines[6].Split('|')[1]);
             double newBalance = amountToDeposit + currentBalance;
             string accountNo = lines[5].Split('|')[1];
-            string date = DateTime.Now.Date.ToString();
+            string date = DateTime.Now.Day.ToString();
             string month = DateTime.Now.Month.ToString();
             string year = DateTime.Now.Year.ToString();
             string accountFileName = getProjectDirectory() + $"\\Accounts\\{accountNo}.txt";
@@ -703,13 +703,13 @@ namespace BankManagementSystem
             string accountNoToSearch = Console.ReadLine();
 
             // Create delegate
-            voidDelegate withdrawMethod = new voidDelegate(withdraw);
-            delegateAsParameter withdrawCheck = new delegateAsParameter(checkAnotherForDepositeWithdraw);
-            oneStringDelegate getWithdraw = new oneStringDelegate(withdrawByPath);
+            //voidDelegate withdrawMethod = new voidDelegate(withdraw);
+            //delegateAsParameter withdrawCheck = new delegateAsParameter(checkAnotherForDepositeWithdraw);
+            //oneStringDelegate getWithdraw = new oneStringDelegate(withdrawByPath);
 
             // Set cursor to bottom and check account
             Console.SetCursorPosition(0, 8);
-            checkAccountNo(accountNoToSearch, withdrawMethod, withdrawCheck, getWithdraw);
+            checkAccountNo(accountNoToSearch, withdraw, checkAnotherForDepositeWithdraw, withdrawByPath);
         }
 
         private static void withdrawByPath(string path)
@@ -733,7 +733,7 @@ namespace BankManagementSystem
             {
                 double newBalance = currentBalance - amountToWithdraw;
                 string accountNo = lines[5].Split('|')[1];
-                string date = DateTime.Now.Date.ToString();
+                string date = DateTime.Now.Day.ToString();
                 string month = DateTime.Now.Month.ToString();
                 string year = DateTime.Now.Year.ToString();
                 string accountFileName = getProjectDirectory() + $"\\Accounts\\{accountNo}.txt";
@@ -741,7 +741,7 @@ namespace BankManagementSystem
                 // Update account file
                 Array.Resize(ref lines, lines.Length + 1);
                 lines[6] = "Balance|" + newBalance;
-                lines[lines.Length - 1] = $"{date}.{month}.{year}|Withdraw|{currentBalance}|{amountToWithdraw}";
+                lines[^1] = $"{date}.{month}.{year}|Withdraw|{currentBalance}|{amountToWithdraw}";
                 File.WriteAllLines(accountFileName, lines);
 
                 // Success and back to main menu
@@ -768,6 +768,99 @@ namespace BankManagementSystem
             // Let user input account no
             Console.SetCursorPosition(21, 5);
             string accountNoToSearch = Console.ReadLine();
+
+            // Set cursor to bottom and check account
+            Console.SetCursorPosition(0, 8);
+            checkAccountNo(accountNoToSearch, accountStatement, checkAnotherForDepositeWithdraw, getAccountStatement);
+        }
+
+        private static void getAccountStatement(string path)
+        {
+            string[] lines = File.ReadAllLines(path);
+            Console.WriteLine(" Account found! The statement is displayed below...");
+            Console.WriteLine("+======================================================+");
+            Console.WriteLine("|                  SIMPLE BANKING SYSTEM               |");
+            Console.WriteLine("|------------------------------------------------------|");
+            Console.WriteLine("|   Account Statement                                  |");
+            Console.WriteLine("|                                                      |");
+            Console.WriteLine("|   Account No:                                        |");
+            Console.WriteLine("|   Account Balance: $                                  |");
+            Console.WriteLine("|   First Name:                                        |");
+            Console.WriteLine("|   Last Name:                                         |");
+            Console.WriteLine("|   Address:                                           |");
+            Console.WriteLine("|   Phone:                                             |");
+            Console.WriteLine("|   Email:                                             |");
+            Console.WriteLine("+======================================================+");
+
+            // get all detail
+            string firstName = lines[0].Split('|')[1];
+            string lastName = lines[1].Split('|')[1];
+            string address = lines[2].Split('|')[1];
+            string phone = lines[3].Split('|')[1];
+            string email = lines[4].Split('|')[1];
+            string accountNo = lines[5].Split('|')[1];
+            string balance = lines[6].Split('|')[1];
+
+            // Fulfill detail to console
+            Console.SetCursorPosition(16, 14);
+            Console.WriteLine(accountNo);
+            Console.SetCursorPosition(22, 15);
+            Console.WriteLine(balance);
+            Console.SetCursorPosition(16, 16);
+            Console.WriteLine(firstName);
+            Console.SetCursorPosition(15, 17);
+            Console.WriteLine(lastName);
+            Console.SetCursorPosition(13, 18);
+            Console.WriteLine(address);
+            Console.SetCursorPosition(11, 19);
+            Console.WriteLine(phone);
+            Console.SetCursorPosition(11, 20);
+            Console.WriteLine(email);
+
+            // Ask user whether need statement via email
+            Console.SetCursorPosition(0, 23);
+            Console.WriteLine(" Email statement (y/n)?");
+            Console.SetCursorPosition(15, 24);
+            if (Console.ReadLine() == "y")
+            {
+                // Set message
+                MailMessage announcement = new MailMessage();
+                announcement.From = new MailAddress("mingchenothin9@gmail.com");
+                announcement.To.Add(email);
+                announcement.Subject = "[13476080 A1] Account Statement from Simple Banking System";
+                announcement.Body = "Account Statement" + "\n" + "Account No: " + accountNo + "\n" + "Account Balance: $" + balance + "\n" +
+                    "First Name: " + firstName + "\n" + "Last Name: " + lastName + "\n" + "Address: " + address + "\n" + "Phone: " + phone +
+                    "\n" + "Email: " + email;
+
+                // Set smtp
+                SmtpClient smtpClient = new SmtpClient();
+                smtpClient.Host = "smtp.gmail.com";
+                smtpClient.Port = 587;
+                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.EnableSsl = true;
+                smtpClient.Credentials = new NetworkCredential("mingchenothin9@gmail.com", "glrbgxichaeuieso");
+
+                // Use SMTP to send email
+                try
+                {
+                    smtpClient.Send(announcement);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception caught in CreateMessageWithAttachment(): {0}",
+                        e.ToString());
+                }
+                Console.WriteLine(" Email sent successfullly!...");
+                Console.ReadKey();
+                mainMenu();
+            }
+            else
+            {
+                Console.WriteLine(" Press any key to return to main menu.");
+                Console.ReadKey();
+                mainMenu();
+            }
         }
 
         //  <==============================================================================================================>
@@ -787,6 +880,77 @@ namespace BankManagementSystem
             // Let user input account no
             Console.SetCursorPosition(21, 5);
             string accountNoToSearch = Console.ReadLine();
+
+            // Set cursor to bottom and check account
+            Console.SetCursorPosition(0, 8);
+            checkAccountNo(accountNoToSearch, deleteAccount, checkAnotherForDepositeWithdraw, getDeleteAccount);
+        }
+
+        private static void getDeleteAccount(string path)
+        {
+            string[] lines = File.ReadAllLines(path);
+            Console.WriteLine(" Account found! Details displayed below...");
+            Console.WriteLine("+======================================================+");
+            Console.WriteLine("|                    ACCOUNT DETAILS                   |");
+            Console.WriteLine("|------------------------------------------------------|");
+            Console.WriteLine("|                                                      |");
+            Console.WriteLine("|   Account No:                                        |");
+            Console.WriteLine("|   Account Balance: $$                                |");
+            Console.WriteLine("|   First Name:                                        |");
+            Console.WriteLine("|   Last Name:                                         |");
+            Console.WriteLine("|   Address:                                           |");
+            Console.WriteLine("|   Phone:                                             |");
+            Console.WriteLine("|   Email:                                             |");
+            Console.WriteLine("+======================================================+");
+
+            // get all detail
+            string firstName = lines[0].Split('|')[1];
+            string lastName = lines[1].Split('|')[1];
+            string address = lines[2].Split('|')[1];
+            string phone = lines[3].Split('|')[1];
+            string email = lines[4].Split('|')[1];
+            string accountNo = lines[5].Split('|')[1];
+            string balance = lines[6].Split('|')[1];
+
+            // Fulfill detail to console
+            Console.SetCursorPosition(16, 13);
+            Console.WriteLine(accountNo);
+            Console.SetCursorPosition(23, 14);
+            Console.WriteLine(balance);
+            Console.SetCursorPosition(16, 15);
+            Console.WriteLine(firstName);
+            Console.SetCursorPosition(15, 16);
+            Console.WriteLine(lastName);
+            Console.SetCursorPosition(13, 17);
+            Console.WriteLine(address);
+            Console.SetCursorPosition(11, 18);
+            Console.WriteLine(phone);
+            Console.SetCursorPosition(11, 19);
+            Console.WriteLine(email);
+
+            // Final check for delete
+            Console.SetCursorPosition(0, 21);
+            Console.WriteLine(" Delete (y/n)?");
+            Console.SetCursorPosition(15, 21);
+            if (Console.ReadLine() == "y")
+            {
+                File.Delete(path);
+                Console.WriteLine($" Account {accountNo} successful deleted.");
+                Console.ReadKey();
+                mainMenu();
+            }
+            else
+            {
+                Console.WriteLine(" Delete another account (y/n)?");
+                if (Console.ReadLine() == "y")
+                {
+                    deleteAccount();
+                }
+                else
+                {
+                    mainMenu();
+                }
+            }
         }
 
         //  <==============================================================================================================>
